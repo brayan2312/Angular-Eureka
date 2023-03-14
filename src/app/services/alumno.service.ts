@@ -4,50 +4,39 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Alumno } from '../models/alumno';
 import { CommonService } from './common.service';
-
+import { BASE_ENDPOINT } from '../config/app';
 @Injectable({
   providedIn: 'root'
 })
 
 export class AlumnoService extends CommonService<Alumno> {
 
-  protected override  baseEndPoint = 'http://localhost:8090/api/alumnos';
+  protected override  baseEndPoint = BASE_ENDPOINT + '/alumnos';
 
   constructor(http: HttpClient) {
     super(http);
    }
-/*
-  private cabezera: HttpHeaders = new HttpHeaders({'Content-Type': 'application/json' });
 
-  constructor(private http: HttpClient) { }
+   public crearConFoto(alumno: Alumno, archivo: File): Observable<Alumno>{
+    const formData = new FormData();
+    formData.append('archivo', archivo);
+    formData.append('nombre', alumno.nombre);
+    formData.append('apellido', alumno.apellido);
+    formData.append('email', alumno.email);
 
-  public listar(): Observable<Alumno[]> {
-    return this.http.get<Alumno[]>(this.baseEndPoint);
+    return this.http.post<Alumno>(this.baseEndPoint + '/crear-con-foto',
+    formData);
+   }
 
-  }
-  public listarPaginas(page: string, size: string): Observable<any> {
-    const params = new HttpParams()
-    .set('page', page)
-    .set('size', size);
-    return this.http.get<any>(`${this.baseEndPoint}/pagina`, { params })
-  }
+   public editarConFoto(alumno: Alumno, archivo: File): Observable<Alumno>{
+    const formData = new FormData();
+    formData.append('archivo', archivo);
+    formData.append('nombre', alumno.nombre);
+    formData.append('apellido', alumno.apellido);
+    formData.append('email', alumno.email);
 
-  public ver(id:number):Observable<Alumno> {
-    return this.http.get<Alumno>(`${this.baseEndPoint}/${id}`);
-  }
+    return this.http.put<Alumno>(`${this.baseEndPoint}/editar-con-foto/${alumno.id}`,
+    formData);
+   }
 
-  public crear(alumno:Alumno): Observable<Alumno>{
-    return this.http.post<Alumno>(this.baseEndPoint, alumno,
-      { headers : this.cabezera });
-  }
-
-  public editar(alumno:Alumno): Observable<Alumno>{
-    return this.http.put<Alumno>(`${this.baseEndPoint}/${alumno.id}`, alumno ,
-      { headers : this.cabezera });
-  }
-
-  public eliminar(id: number): Observable<void>{
-    return this.http.delete<void>(`${this.baseEndPoint}/${id}`, { headers : this.cabezera });
-
-  }*/
 }

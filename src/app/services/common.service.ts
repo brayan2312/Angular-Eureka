@@ -9,7 +9,7 @@ export abstract class CommonService<E extends Generic> {
 
   protected cabezera: HttpHeaders = new HttpHeaders({'Content-Type': 'application/json' });
 
-  constructor(private http: HttpClient) { }
+  constructor(protected http: HttpClient) { }
 
   public listar(): Observable<E[]> {
     return this.http.get<E[]>(this.baseEndPoint);
