@@ -56,7 +56,7 @@ export abstract class CommonListarComponent< E extends Generic,
       cancelButtonText: 'Cancelar',
     }).then((result) => {
       if(result.value){
-
+        // ********************************************************************
         this.service.eliminar(e.id).subscribe(() => {
           this.calcularRangos();
           Swal.fire('Eliminado:',`${this.nombreModel} ${e.nombre} eliminado con exito`, 'success');
@@ -66,6 +66,8 @@ export abstract class CommonListarComponent< E extends Generic,
 
           }
         );
+        // ********************************************************************
+
       }
     });
 
