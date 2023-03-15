@@ -23,10 +23,15 @@ S extends CommonService<E>> implements OnInit {
     this.route.paramMap.subscribe(params => {
       const id: number = +params.get('id')!;
       if(id){
-        this.service.ver(id).subscribe(m => this.model = m);
+        this.service.ver(id).subscribe(m => {
+          this.model = m;
+          this.titulo = 'Editar ' + this.nombreModel;
+        });
       }
     })
   }
+
+
 
   crear(): void {
     this.service.crear(this.model).subscribe(m => {
@@ -42,7 +47,9 @@ S extends CommonService<E>> implements OnInit {
   }
 
   editar(): void {
-    this.service.crear(this.model).subscribe(m => {
+    console.log(this.model);
+
+    this.service.editar(this.model).subscribe(m => {
       Swal.fire('Editado',`${this.nombreModel} ${m.nombre} editado con exito`, 'success');
       this.router.navigate([this.redirect]);
     }, err => {
