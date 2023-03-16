@@ -1,0 +1,202 @@
+[{
+  "_id": {
+    "$oid": "640a358f42c29c32b274cd7d"
+  },
+  "texto": "Cristobal Colon",
+  "alumno": {
+    "_id": 2,
+    "nombre": "John",
+    "apellido": "Doe",
+    "email": "john@gmail.com",
+    "createAt": {
+      "$date": {
+        "$numberLong": "1572731552000"
+      }
+    }
+  },
+  "alumnoId": 2,
+  "pregunta": {
+    "_id": 1,
+    "texto": "Quién descubrió América",
+    "examen": {
+      "_id": 1,
+      "preguntas": [],
+      "respondido": false
+    }
+  },
+  "preguntaId": 1,
+  "_class": "com.formacionbdi.microservicios.respuestas.examenes.models.entity.Respuesta"
+},{
+  "_id": {
+    "$oid": "640a358f42c29c32b274cd7e"
+  },
+  "texto": "1492",
+  "alumno": {
+    "_id": 2,
+    "nombre": "John",
+    "apellido": "Doe",
+    "email": "john@gmail.com",
+    "createAt": {
+      "$date": {
+        "$numberLong": "1572731552000"
+      }
+    }
+  },
+  "alumnoId": 2,
+  "pregunta": {
+    "_id": 2,
+    "texto": "En qué año se descubrió América",
+    "examen": {
+      "_id": 1,
+      "preguntas": [],
+      "respondido": false
+    }
+  },
+  "preguntaId": 2,
+  "_class": "com.formacionbdi.microservicios.respuestas.examenes.models.entity.Respuesta"
+},{
+  "_id": {
+    "$oid": "640a358f42c29c32b274cd7f"
+  },
+  "texto": "Cuzco",
+  "alumno": {
+    "_id": 2,
+    "nombre": "John",
+    "apellido": "Doe",
+    "email": "john@gmail.com",
+    "createAt": {
+      "$date": {
+        "$numberLong": "1572731552000"
+      }
+    }
+  },
+  "alumnoId": 2,
+  "pregunta": {
+    "_id": 3,
+    "texto": "Capital del imperio Inca",
+    "examen": {
+      "_id": 1,
+      "preguntas": [],
+      "respondido": false
+    }
+  },
+  "preguntaId": 3,
+  "_class": "com.formacionbdi.microservicios.respuestas.examenes.models.entity.Respuesta"
+},{
+  "_id": {
+    "$oid": "64136d7386513b54cdfd26f2"
+  },
+  "texto": "B",
+  "alumno": {
+    "_id": 2,
+    "nombre": "John",
+    "apellido": "Doe",
+    "email": "john@gmail.com",
+    "createAt": {
+      "$date": {
+        "$numberLong": "1572731552000"
+      }
+    }
+  },
+  "alumnoId": 2,
+  "pregunta": {
+    "_id": 11,
+    "texto": "Pregunta 2",
+    "examen": {
+      "_id": 3,
+      "nombre": "prueba 3",
+      "preguntas": [],
+      "respondido": false
+    }
+  },
+  "preguntaId": 11,
+  "_class": "com.formacionbdi.microservicios.respuestas.examenes.models.entity.Respuesta"
+},{
+  "_id": {
+    "$oid": "64136d7386513b54cdfd26f3"
+  },
+  "texto": "A",
+  "alumno": {
+    "_id": 2,
+    "nombre": "John",
+    "apellido": "Doe",
+    "email": "john@gmail.com",
+    "createAt": {
+      "$date": {
+        "$numberLong": "1572731552000"
+      }
+    }
+  },
+  "alumnoId": 2,
+  "pregunta": {
+    "_id": 9,
+    "texto": "Pregunta 1",
+    "examen": {
+      "_id": 3,
+      "nombre": "prueba 3",
+      "preguntas": [],
+      "respondido": false
+    }
+  },
+  "preguntaId": 9,
+  "_class": "com.formacionbdi.microservicios.respuestas.examenes.models.entity.Respuesta"
+},{
+  "_id": {
+    "$oid": "64136d7386513b54cdfd26f4"
+  },
+  "texto": "C",
+  "alumno": {
+    "_id": 2,
+    "nombre": "John",
+    "apellido": "Doe",
+    "email": "john@gmail.com",
+    "createAt": {
+      "$date": {
+        "$numberLong": "1572731552000"
+      }
+    }
+  },
+  "alumnoId": 2,
+  "pregunta": {
+    "_id": 12,
+    "texto": "Pregunta 3",
+    "examen": {
+      "_id": 3,
+      "nombre": "prueba 3",
+      "preguntas": [],
+      "respondido": false
+    }
+  },
+  "preguntaId": 12,
+  "_class": "com.formacionbdi.microservicios.respuestas.examenes.models.entity.Respuesta"
+},{
+  "_id": {
+    "$oid": "64136d7386513b54cdfd26f5"
+  },
+  "texto": "D",
+  "alumno": {
+    "_id": 2,
+    "nombre": "John",
+    "apellido": "Doe",
+    "email": "john@gmail.com",
+    "createAt": {
+      "$date": {
+        "$numberLong": "1572731552000"
+      }
+    }
+  },
+  "alumnoId": 2,
+  "pregunta": {
+    "_id": 13,
+    "texto": "Pregunta  4",
+    "examen": {
+      "_id": 3,
+      "nombre": "prueba 3",
+      "preguntas": [],
+      "respondido": false
+    }
+  },
+  "preguntaId": 13,
+  "_class": "com.formacionbdi.microservicios.respuestas.examenes.models.entity.Respuesta"
+}]
+
