@@ -12,6 +12,7 @@ import { ResponderExamenModalComponent } from './responder-examen-modal.componen
 import { RespuestaService } from '../../services/respuesta.service';
 import { Respuesta } from 'src/app/models/respuesta';
 import Swal from 'sweetalert2';
+import { VerExamenModalComponent } from './ver-examen-modal.component';
 
 @Component({
   selector: 'app-responder-examen',
@@ -78,6 +79,27 @@ export class ResponderExamenComponent implements OnInit {
         });
       }
      });
+  }
+
+  verExamen(examen: Examen): void {
+    this.respuestasService.obtenerRespuestaPorAlumnoPorExamen(this.alumno, examen)
+    .subscribe(res => {
+      const modalRef = this.dialog.open(VerExamenModalComponent, {
+        width: '750px',
+        data: {
+          curso: this.curso,
+          examen,
+          respuestas: res
+        }
+      });
+      console.log(res);
+
+      modalRef.afterClosed().subscribe(() => {
+        console.log('Modal ver examen cerrado');
+
+      })
+
+    });
   }
 
 }
