@@ -7,5 +7,5 @@ export class Curso implements Generic{
    nombre: string;
    createAt: string;
    alumnos: Alumno[] = [];
-   examen: Examen[] = [];
+   examenes: Examen[] = [];
 }

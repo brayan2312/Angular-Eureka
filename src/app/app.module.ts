@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CursoFormComponent } from './components/cursos/curso-form.component';
 import { ExamenFormComponent } from './components/examenes/examen-form.component';
+import { AsignarAlumnosComponent } from './components/cursos/asignar-alumnos.component';
 
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
@@ -22,7 +23,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
-import { AsignarAlumnosComponent } from './components/cursos/asignar-alumnos.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { AsignarExamenesComponent } from './components/cursos/asignar-examenes.component';
 
 
 
@@ -37,6 +39,7 @@ import { AsignarAlumnosComponent } from './components/cursos/asignar-alumnos.com
     CursoFormComponent,
     ExamenFormComponent,
     AsignarAlumnosComponent,
+    AsignarExamenesComponent,
 
   ],
   imports: [
@@ -53,7 +56,8 @@ import { AsignarAlumnosComponent } from './components/cursos/asignar-alumnos.com
     MatCheckboxModule,
     MatButtonModule,
     MatCardModule,
-    MatTabsModule
+    MatTabsModule,
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

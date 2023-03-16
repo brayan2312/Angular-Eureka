@@ -13,6 +13,7 @@
             <th>id</th>
             <th>nombre</th>
             <th>alumnos</th>
+            <th>examenes</th>
             <td>Fecha creacion</td>
             <td>editar</td>
             <td>eliminar</td>
@@ -23,11 +24,17 @@
           <tr *ngFor="let cursos of lista">
             <td>{{cursos.id}}</td>
             <td>{{ cursos.nombre }}</td>
+
             <td><button class="btn btn-info btn-sm"
               [routerLink]="['/cursos/asignar-alumnos', cursos.id]">añadir ({{ cursos.alumnos.length }})</button></td>
-            <td>{{ cursos.createAt | date:'yyyy-MM-dd' }}</td>
-            <td><button class="btn btn-primary btn-sm" [routerLink]="['/cursos/form/', cursos.id]">Editar</button>
-            </td>
+
+              <td><button class="btn btn-info btn-sm"
+                [routerLink]="['/cursos/asignar-examenes', cursos.id]">añadir ({{ cursos.examenes.length }})</button></td>
+
+                <td>{{ cursos.createAt | date:'yyyy-MM-dd' }}</td>
+            <td><button class="btn btn-primary btn-sm" [routerLink]="['/cursos/form/', cursos.id]">Editar</button></td>
+
+
 
             <td><button class="btn btn-danger btn-sm" (click)="eliminar(cursos)">Eliminar</button></td>
 
